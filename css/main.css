@@ -685,6 +685,15 @@ h2 {
   }
 }
 
+.error{
+  color: red !important;
+  border-color: red !important;
+}
+
+.error::placeholder{
+  color: red !important;
+}
+
 h3 {
   font: normal 700 2rem/1.2 "Poppins", sans-serif;
   text-transform: uppercase;
