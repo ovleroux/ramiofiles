@@ -72,32 +72,32 @@ $(function() {
   // --------------------------------------------- //
   // Mailchimp Notify Form Start
   // --------------------------------------------- //
-  $('.notify-form').ajaxChimp({
-    callback: mailchimpCallback,
-    url: 'https://besaba.us10.list-manage.com/subscribe/post?u=e8d650c0df90e716c22ae4778&amp;id=54a7906900'
-  });
+  // $('.notify-form').ajaxChimp({
+  //   callback: mailchimpCallback,
+  //   url: 'https://besaba.us10.list-manage.com/subscribe/post?u=e8d650c0df90e716c22ae4778&amp;id=54a7906900'
+  // });
 
-  function mailchimpCallback(resp) {
-    if(resp.result === 'success') {
-      $('.notify').find('.form').addClass('is-hidden');
-      $('.notify').find('.subscription-ok').addClass('is-visible');
-      setTimeout(function() {
-        // Done Functions
-        $('.notify').find('.subscription-ok').removeClass('is-visible');
-        $('.notify').find('.form').delay(300).removeClass('is-hidden');
-        $('.notify-form').trigger("reset");
-      }, 5000);
-    } else if(resp.result === 'error') {
-      $('.notify').find('.form').addClass('is-hidden');
-      $('.notify').find('.subscription-error').addClass('is-visible');
-      setTimeout(function() {
-        // Done Functions
-        $('.notify').find('.subscription-error').removeClass('is-visible');
-        $('.notify').find('.form').delay(300).removeClass('is-hidden');
-        $('.notify-form').trigger("reset");
-      }, 5000);
-    }
-  };
+  // function mailchimpCallback(resp) {
+  //   if(resp.result === 'success') {
+  //     $('.notify').find('.form').addClass('is-hidden');
+  //     $('.notify').find('.subscription-ok').addClass('is-visible');
+  //     setTimeout(function() {
+  //       // Done Functions
+  //       $('.notify').find('.subscription-ok').removeClass('is-visible');
+  //       $('.notify').find('.form').delay(300).removeClass('is-hidden');
+  //       $('.notify-form').trigger("reset");
+  //     }, 5000);
+  //   } else if(resp.result === 'error') {
+  //     $('.notify').find('.form').addClass('is-hidden');
+  //     $('.notify').find('.subscription-error').addClass('is-visible');
+  //     setTimeout(function() {
+  //       // Done Functions
+  //       $('.notify').find('.subscription-error').removeClass('is-visible');
+  //       $('.notify').find('.form').delay(300).removeClass('is-hidden');
+  //       $('.notify-form').trigger("reset");
+  //     }, 5000);
+  //   }
+  // };
   // --------------------------------------------- //
   // Mailchimp Notify Form End
   // --------------------------------------------- //
@@ -105,24 +105,24 @@ $(function() {
   // --------------------------------------------- //
   // Contact Form Start
   // --------------------------------------------- //
-  $("#contact-form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-      $('.writealine').find('.form').addClass('is-hidden');
-      $('.writealine').find('.reply-group').addClass('is-visible');
-			setTimeout(function() {
-				// Done Functions
-        $('.writealine').find('.reply-group').removeClass('is-visible');
-        $('.writealine').find('.form').delay(300).removeClass('is-hidden');
-				th.trigger("reset");
-			}, 5000);
-		});
-		return false;
-	});
+  // $("#contact-form").submit(function() { //Change
+	// 	var th = $(this);
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "mail.php", //Change
+	// 		data: th.serialize()
+	// 	}).done(function() {
+  //     $('.writealine').find('.form').addClass('is-hidden');
+  //     $('.writealine').find('.reply-group').addClass('is-visible');
+	// 		setTimeout(function() {
+	// 			// Done Functions
+  //       $('.writealine').find('.reply-group').removeClass('is-visible');
+  //       $('.writealine').find('.form').delay(300).removeClass('is-hidden');
+	// 			th.trigger("reset");
+	// 		}, 5000);
+	// 	});
+	// 	return false;
+	// });
   // --------------------------------------------- //
   // Contact Form End
   // --------------------------------------------- //
